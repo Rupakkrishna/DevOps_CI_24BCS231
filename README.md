@@ -355,7 +355,7 @@ A declarative `Jenkinsfile` is provided in the repository root. The pipeline exe
 5. Run **Build Now** to verify continuous integration.
 ## DevOps CI
 
-This project uses Git and GitHub for version control and will be integrated with Jenkins for continuous integration.
+This project uses Git, GitHub, and Jenkins for automated continuous integration.
 ## Bicycle Rental Features
 
 The system supports bicycle availability tracking, rental management, bicycle returns, and fare calculation.
