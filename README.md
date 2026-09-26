@@ -353,4 +353,6 @@ A declarative `Jenkinsfile` is provided in the repository root. The pipeline exe
 3. Choose **Git**, provide the repository URL and branch (`main`).
 4. Script Path: `Jenkinsfile`.
 5. Run **Build Now** to verify continuous integration.
+## DevOps CI
 
+This project uses Git and GitHub for version control and will be integrated with Jenkins for continuous integration.
