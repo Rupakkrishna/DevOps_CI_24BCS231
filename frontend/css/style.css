@@ -1,0 +1,176 @@
+/* PBRMS Custom Styling */
+:root {
+    --primary-color: #0d9488;
+    --primary-dark: #0f766e;
+    --primary-light: #ccfbf1;
+    --accent-color: #f59e0b;
+    --dark-bg: #0f172a;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-pbrms {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.brand-icon {
+    color: #14b8a6;
+    margin-right: 8px;
+}
+
+/* Badges */
+.badge-available {
+    background-color: #10b981;
+    color: white;
+    font-weight: 600;
+}
+
+.badge-rented {
+    background-color: #f59e0b;
+    color: #111827;
+    font-weight: 600;
+}
+
+.badge-maintenance {
+    background-color: #ef4444;
+    color: white;
+    font-weight: 600;
+}
+
+.badge-inactive {
+    background-color: #6b7280;
+    color: white;
+    font-weight: 600;
+}
+
+.badge-paid {
+    background-color: #10b981;
+    color: white;
+}
+
+.badge-pending {
+    background-color: #f59e0b;
+    color: #111827;
+}
+
+.badge-failed {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Metric Cards */
+.stat-card {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #ffffff;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Active Rental Banner */
+.active-rental-banner {
+    background: linear-gradient(135deg, #0d9488 0%, #065f46 100%);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(13, 148, 136, 0.25);
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.rental-timer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Cards & Tables */
+.card {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.table thead th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    border-top: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+}
+
+/* Quick Fill Buttons */
+.demo-btn {
+    font-size: 0.82rem;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+

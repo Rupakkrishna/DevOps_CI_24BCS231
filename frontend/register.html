@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - PBRMS</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-pbrms">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <i class="bi bi-bicycle brand-icon fs-3"></i>
+                <span>PBRMS</span>
+            </a>
+            <a href="/login.html" class="btn btn-outline-light btn-sm">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Create an Account</h3>
+                            <p class="text-muted small">Join PBRMS as a Customer or register your fleet as a Rental Owner</p>
+                        </div>
+
+                        <!-- Role Navigation Tabs -->
+                        <ul class="nav nav-pills nav-fill mb-4 p-1 bg-light rounded-3" id="registerTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active fw-semibold" id="customer-tab" data-bs-toggle="pill" data-bs-target="#customerPane" type="button" role="tab">
+                                    <i class="bi bi-person me-1"></i> Customer
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link fw-semibold" id="owner-tab" data-bs-toggle="pill" data-bs-target="#ownerPane" type="button" role="tab">
+                                    <i class="bi bi-shop me-1"></i> Rental Owner
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="registerTabsContent">
+                            <!-- CUSTOMER REGISTRATION -->
+                            <div class="tab-pane fade show active" id="customerPane" role="tabpanel">
+                                <div id="userAlertContainer"></div>
+                                <form id="userRegisterForm">
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label fw-semibold small">Full Name</label>
+                                        <input type="text" class="form-control" id="userName" placeholder="Alice Johnson" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userEmail" class="form-label fw-semibold small">Email Address</label>
+                                        <input type="email" class="form-control" id="userEmail" placeholder="alice@example.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userPhone" class="form-label fw-semibold small">Phone Number</label>
+                                        <input type="tel" class="form-control" id="userPhone" placeholder="+1 555-0101" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="userPassword" class="form-label fw-semibold small">Password</label>
+                                        <input type="password" class="form-control" id="userPassword" placeholder="Minimum 6 characters" minlength="6" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold" id="userRegisterBtn">
+                                        Register as Customer
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- RENTAL OWNER REGISTRATION -->
+                            <div class="tab-pane fade" id="ownerPane" role="tabpanel">
+                                <div class="alert alert-warning py-2 small mb-3">
+                                    <i class="bi bi-info-circle me-1"></i>
+                                    <strong>Note:</strong> Rental Owner registrations require Administrator approval before you can sign in and manage bicycles.
+                                </div>
+                                <div id="ownerAlertContainer"></div>
+                                <form id="ownerRegisterForm">
+                                    <div class="mb-3">
+                                        <label for="ownerName" class="form-label fw-semibold small">Business / Owner Name</label>
+                                        <input type="text" class="form-control" id="ownerName" placeholder="Metro Bikes Co." required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ownerEmail" class="form-label fw-semibold small">Business Email Address</label>
+                                        <input type="email" class="form-control" id="ownerEmail" placeholder="contact@metrobikes.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ownerPhone" class="form-label fw-semibold small">Phone Number</label>
+                                        <input type="tel" class="form-control" id="ownerPhone" placeholder="+1 555-0201" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ownerAddress" class="form-label fw-semibold small">Business Address</label>
+                                        <input type="text" class="form-control" id="ownerAddress" placeholder="123 Greenway Blvd, Downtown" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="ownerPassword" class="form-label fw-semibold small">Password</label>
+                                        <input type="password" class="form-control" id="ownerPassword" placeholder="Minimum 6 characters" minlength="6" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success w-100 py-2 fw-semibold" id="ownerRegisterBtn">
+                                        Register as Rental Owner
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 pt-2 border-top">
+                            <p class="small text-muted mb-0">
+                                Already have an account? <a href="/login.html" class="fw-semibold text-primary">Sign in here</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
+

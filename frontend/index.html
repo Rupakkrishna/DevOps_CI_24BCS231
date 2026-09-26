@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBRMS - Public Bicycle Rental Management System</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-pbrms sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <i class="bi bi-bicycle brand-icon fs-3"></i>
+                <span>PBRMS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-dismiss="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stations">Stations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                </ul>
+                <div class="d-flex gap-2" id="navAuthButtons">
+                    <a href="/login.html" class="btn btn-outline-light btn-sm px-3">Sign In</a>
+                    <a href="/register.html" class="btn btn-primary btn-sm px-3">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <span class="badge bg-light text-dark px-3 py-2 mb-3 rounded-pill fw-semibold">
+                            <i class="bi bi-shield-check text-success me-1"></i> Software Engineering & Agile Project
+                        </span>
+                        <h1 class="display-4 fw-bold mb-3">Public Bicycle Rental Management System</h1>
+                        <p class="lead mb-4 text-light opacity-90">
+                            A centralized urban mobility platform connecting customers, rental owners, and city transit authorities. Rent instantly, track ride duration, and return at any docking station.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="/register.html" class="btn btn-light btn-lg px-4 fw-semibold text-primary">
+                                <i class="bi bi-person-plus me-1"></i> Get Started
+                            </a>
+                            <a href="#stations" class="btn btn-outline-light btn-lg px-4">
+                                <i class="bi bi-geo-alt me-1"></i> View Stations
+                            </a>
+                            <a href="/login.html" class="btn btn-warning btn-lg px-4 fw-semibold text-dark">
+                                <i class="bi bi-box-arrow-in-right me-1"></i> Demo Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Platform Metrics -->
+        <section class="py-4 bg-white border-bottom">
+            <div class="container">
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <h3 class="fw-bold text-primary mb-0" id="statStations">4</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Docking Stations</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h3 class="fw-bold text-success mb-0" id="statAvailableBikes">5</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Available Bicycles</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h3 class="fw-bold text-warning mb-0" id="statRentedBikes">1</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Active Rentals</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h3 class="fw-bold text-info mb-0">100%</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Local & Responsive</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-5" id="how-it-works">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">How PBRMS Works</h2>
+                    <p class="text-muted">Four simple steps to seamless bicycle rentals</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-md-3">
+                        <div class="card h-100 p-4 border-0 shadow-sm">
+                            <div class="fs-1 text-primary mb-3"><i class="bi bi-geo-alt-fill"></i></div>
+                            <h5 class="fw-bold">1. Select Station</h5>
+                            <p class="text-muted small">Choose any nearby docking station and browse available bicycles by type and hourly rate.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 p-4 border-0 shadow-sm">
+                            <div class="fs-1 text-primary mb-3"><i class="bi bi-bicycle"></i></div>
+                            <h5 class="fw-bold">2. Rent Bicycle</h5>
+                            <p class="text-muted small">Confirm rental instantly. The bicycle status changes to Rented in real time across the system.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 p-4 border-0 shadow-sm">
+                            <div class="fs-1 text-primary mb-3"><i class="bi bi-arrow-repeat"></i></div>
+                            <h5 class="fw-bold">3. Return Anywhere</h5>
+                            <p class="text-muted small">Dock the bicycle at any station with available capacity. Real-time duration is captured.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 p-4 border-0 shadow-sm">
+                            <div class="fs-1 text-primary mb-3"><i class="bi bi-receipt"></i></div>
+                            <h5 class="fw-bold">4. Automatic Fare</h5>
+                            <p class="text-muted small">Fare is accurately calculated: Duration (Hours) × Rate. Simulated payment ledger updates instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Docking Stations Section -->
+        <section class="py-5 bg-light" id="stations">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <div>
+                        <h2 class="fw-bold mb-1">Docking Stations</h2>
+                        <p class="text-muted mb-0">Explore live capacity and bicycle availability across stations</p>
+                    </div>
+                    <a href="/login.html" class="btn btn-primary">
+                        <i class="bi bi-bicycle me-1"></i> Rent a Bike Now
+                    </a>
+                </div>
+
+                <div class="row g-4" id="stationsList">
+                    <div class="col-12 text-center py-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading stations...</span>
+                        </div>
+                        <p class="text-muted mt-2">Loading station availability...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-1 text-light"><strong>Public Bicycle Rental Management System (PBRMS)</strong></p>
+            <p class="small text-muted mb-0">Built with HTML5, Bootstrap 5, Flask REST API & MySQL 8. Designed for SE & Agile demonstration.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- App Scripts -->
+    <script src="/js/api.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Check if user is already logged in and update nav buttons
+            const user = Storage.getUser();
+            if (user) {
+                const navButtons = document.getElementById('navAuthButtons');
+                let dashLink = '/user/dashboard.html';
+                if (user.role === 'admin') dashLink = '/admin/dashboard.html';
+                else if (user.role === 'rental_owner') dashLink = '/owner/dashboard.html';
+
+                navButtons.innerHTML = `
+                    <a href="${dashLink}" class="btn btn-outline-light btn-sm px-3">Dashboard (${user.name})</a>
+                    <button onclick="logout()" class="btn btn-danger btn-sm px-3">Logout</button>
+                `;
+            }
+
+            // Load stations
+            try {
+                const stations = await api.get('/stations');
+                const container = document.getElementById('stationsList');
+                if (!stations || stations.length === 0) {
+                    container.innerHTML = '<div class="col-12 text-center text-muted">No stations registered yet.</div>';
+                    return;
+                }
+
+                let totalAvail = 0;
+                container.innerHTML = stations.map(s => {
+                    totalAvail += s.available_bicycles;
+                    const percent = s.capacity > 0 ? Math.round((s.available_bicycles / s.capacity) * 100) : 0;
+                    return `
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 shadow-sm border-0 stat-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title fw-bold text-truncate mb-0" title="${s.station_name}">${s.station_name}</h5>
+                                        <span class="badge ${s.available_bicycles > 0 ? 'bg-success' : 'bg-danger'}">
+                                            ${s.available_bicycles} Avail
+                                        </span>
+                                    </div>
+                                    <p class="text-muted small mb-3"><i class="bi bi-geo-alt me-1"></i>${s.location}</p>
+                                    
+                                    <div class="mb-2">
+                                        <div class="d-flex justify-content-between small text-muted mb-1">
+                                            <span>Bicycles: <strong>${s.available_bicycles} / ${s.capacity}</strong></span>
+                                            <span>${percent}%</span>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar ${percent > 50 ? 'bg-success' : (percent > 20 ? 'bg-warning' : 'bg-danger')}"
+                                                 role="progressbar" style="width: ${percent}%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="/login.html" class="btn btn-outline-primary btn-sm w-100 ${s.available_bicycles === 0 ? 'disabled' : ''}">
+                                            ${s.available_bicycles > 0 ? '<i class="bi bi-bicycle me-1"></i>Rent Bicycle' : 'Station Empty'}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('statStations').innerText = stations.length;
+                document.getElementById('statAvailableBikes').innerText = totalAvail;
+            } catch (err) {
+                console.error('Error loading stations:', err);
+                document.getElementById('stationsList').innerHTML = `
+                    <div class="col-12 text-center text-muted">
+                        <p>Could not connect to backend server. Make sure Flask is running.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
+
