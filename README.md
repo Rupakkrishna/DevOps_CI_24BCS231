@@ -355,7 +355,7 @@ A declarative `Jenkinsfile` is provided in the repository root. The pipeline exe
 5. Run **Build Now** to verify continuous integration.
 ## DevOps CI
 
-This project uses Git and GitHub for version control and will be integrated with Jenkins for continuous integration.
+This project uses GitHub and Jenkins to automate continuous integration and testing.
 ## Bug Fix
 
 Improved the documentation for bicycle return processing and fare calculation.
