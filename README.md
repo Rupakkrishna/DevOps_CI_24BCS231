@@ -356,3 +356,6 @@ A declarative `Jenkinsfile` is provided in the repository root. The pipeline exe
 ## DevOps CI
 
 This project uses Git and GitHub for version control and will be integrated with Jenkins for continuous integration.
+## Bicycle Rental Features
+
+The system supports bicycle availability tracking, rental management, bicycle returns, and fare calculation.
