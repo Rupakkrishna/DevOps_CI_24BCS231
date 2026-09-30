@@ -30,3 +30,11 @@ def test_fare_calculation():
     assert duration4 == 1.25
     assert fare4 == round(1.25 * 7.50, 2)  # 9.38
 
+def test_fare_zero_duration():
+    """Test zero-duration fare calculation."""
+    start = datetime(2026, 9, 21, 10, 0, 0)
+    duration, fare = calculate_fare(start, start, 10.00)
+
+    assert duration == 1.0
+    assert fare == 10.00
+
